@@ -1,0 +1,35 @@
+ADS Assignment 1 :
+
+
+Using : Priority Queue 
+----------------------
+A priority queue is an abstract data type that stores elements with priorities and provides operations to access the elements based 
+on their priority. The elements with higher priority are given priority over the elements with lower priority.
+The priority queue can be implemented in different ways such as a min heap, max heap, or a binary search tree.
+
+Real world scenario :
+---------------------
+Imagine you are working at a hospital and need to keep track of patients with various medical conditions. 
+Some patients require immediate attention, while others can wait. 
+You can use a priority queue to prioritize which patients to attend to first based on their urgency level.
+
+So here, 
+In the hospital triage system, patients are prioritized based on their urgency level and the availability of doctors. 
+The priority queue class is used to manage the order of treatment for patients. 
+The priority queue class has several methods to manage the queue of patients, such as adding a new patient, treating the next patient, 
+getting the total treatment time for all patients in the queue, getting the number of patients in the queue, 
+and updating the urgency level of a patient.
+
+The Patient class implements the Comparable interface, which allows the patients to be compared based on their urgency level 
+and doctor availability. The Patient class contains information about the patient's name, urgency level, treatment time, and doctor ID.
+The compareTo method of the Patient class is used to compare the urgency level of patients. If two patients have the same urgency level,
+they are compared based on the availability of the doctor. The higher the urgency level, the higher the priority for treatment. 
+The lower the doctor ID, the higher the priority for treatment.
+
+The PriorityQueue class uses an ArrayList to store the patients in the queue. The addPatient method is used to add a new patient to 
+the queue. The treatPatient method is used to remove the next patient from the queue and treat them. The getTotalTreatmentTime method 
+returns the total treatment time for all patients in the queue. The getPatientCount method returns the number of patients in the queue. 
+The updatePatientPriority method is used to update the urgency level of a patient in the queue.
+
+The goal of this implementation is to create a priority queue for a hospital triage system that prioritizes the treatment of patients
+ based on their urgency level and doctor availability, and allows for efficient management of the queue of patients.

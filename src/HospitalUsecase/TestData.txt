@@ -1,0 +1,34 @@
+Enter the number of patients to be treated:
+3
+Enter patient name:
+John
+Enter patient urgency level:
+3
+Enter patient treatment time:
+15
+Enter patient name:
+Jane
+Enter patient urgency level:
+1
+Enter patient treatment time:
+10
+Enter patient name:
+Bob
+Enter patient urgency level:
+2
+Enter patient treatment time:
+20
+Treatment order:
+Jane
+Bob
+John
+Total treatment time: 45
+Enter a patient name to update their priority:
+John
+Enter the new urgency level:
+1
+Updated treatment order:
+John
+Jane
+Bob
+Total treatment time: 45

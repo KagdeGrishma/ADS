@@ -1,0 +1,85 @@
+Explaination of Main class :
+This code is a main class that implements the functionality of a priority queue for patient treatment in a hospital. 
+The code includes the following steps:
+
+Initialization: A PriorityQueue object is created and a Scanner object is used to take input from the user.
+ The number of doctors available and their availability are also initialized.
+
+Adding Patients: The number of patients to be treated is taken as input from the user. 
+For each patient, their name, urgency level, and treatment time are taken as input. 
+A doctor is assigned to each patient by taking the next available doctor (indicated by the nextAvailableDoctor variable) 
+and updating the doctorAvailability array to reflect the time taken by the doctor to treat the patient. 
+A Patient object is then created using the patient details and added to the priority queue using the addPatient() method.
+
+Treatment Order: The treatment order is printed by getting the queue from the priority queue and printing the names of 
+each patient in the queue.
+
+Updating Patient Priority: The user is prompted to enter the name of a patient to update their priority and the
+ new urgency level for that patient. The updatePatientPriority() method is called on the priority queue to update the priority of 
+ the specified patient.
+
+Final Treatment Order: The updated treatment order is printed and the total treatment time is calculated and printed.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Explaination of PriorityQueue class :
+
+The code defines a PriorityQueue class in Java. The class has a private static instance variable queue of type ArrayList<Patient> 
+which is an array list of Patient objects.
+
+The class has a constructor method PriorityQueue() that initializes the queue instance variable as an empty array list of Patient objects.
+
+The class has a method addPatient(Patient patient) that adds a Patient object to the queue and sorts the queue in 
+ascending order of urgency level, which is determined by the compareTo method in the Patient class.
+
+The class has a method treatPatient() that removes the first patient (the patient with the highest urgency level) 
+in the queue and returns it.
+
+The class has a method getTotalTreatmentTime() that calculates the total treatment time of all the patients in the 
+queue by summing the treatment time of each patient.
+
+The class has a method getPatientCount() that returns the number of patients in the queue.
+
+The class has a method updatePatientPriority(String name, int newUrgencyLevel) that updates the urgency 
+level of a patient based on the name of the patient. The method iterates over the patients in the queue, and when it finds 
+the patient with the specified name, it updates the urgency level of that patient. 
+Then the queue is sorted again in ascending order of urgency level.
+
+The class also has a method getQueue() which returns the queue.
+----------------------------------------------------------------------------------------------------------------------------
+
+Explaination of Patient class :
+
+The class Patient represents a patient who needs medical treatment. It has instance variables name, urgencyLevel, treatmentTime,
+and doctorId, which are used to store information about the patient such as their name, the level of urgency of their treatment, 
+the time required to treat them, and the id of the doctor who will be treating them, respectively.
+
+The Patient class implements the Comparable interface, which means that objects of the Patient class can be compared to each other 
+based on the value of a specific field, in this case the urgencyLevel. The compareTo method is overridden to sort the patients based 
+on their urgency level. In case two patients have the same urgency level, they will be sorted based on the value of their doctorId.
+
+The Patient class has methods to access and modify the values of its instance variables such as getName(), getUrgencyLevel(),
+getTreatmentTime(), getDoctorId(), setUrgencyLevel(), and setDoctorId().
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Comment on the analysis of the algorithms used and how to tune its practical efficiency :
+
+1.Patient Arrival Simulation: This experiment simulates the arrival of patients and their treatment in the hospital. 
+This will involve adding patients to the queue, treating patients, and updating their urgency levels. The goal is to
+ determine if the priority queue is implemented correctly and patients are being treated based on their urgency level and doctor 
+ availability.
+
+2.Load Testing: This experiment will determine the efficiency of the priority queue under different loads. This will 
+involve adding a large number of patients to the queue and checking the time taken to add patients, treat patients, and update
+ their urgency levels. The goal is to determine the scalability of the priority queue and the impact of the number of patients 
+ on the performance of the system.
+
+3.Performance Comparison: This experiment will compare the performance of the priority queue with other data structures such 
+as a linked list, stack, or heap. The goal is to determine if the priority queue is the most efficient data structure for the 
+given problem and if there are any alternative data structures that can be used for better performance.
+
+4.Tuning the Practical Efficiency: The practical efficiency of the priority queue can be improved by using efficient algorithms for 
+sorting, searching, and updating the queue. For example, using a binary search algorithm for searching patients instead of a linear 
+search algorithm can reduce the time complexity from O(n) to O(log n). Additionally, using a min-heap instead of an array-based queue 
+can improve the time complexity for adding and treating patients.
